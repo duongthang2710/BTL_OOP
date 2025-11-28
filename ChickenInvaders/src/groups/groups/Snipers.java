@@ -5,7 +5,7 @@ import groups.Chicken.Chicken;
 import player.SpaceShip;
 
 public class Snipers extends GeneralGroups {
-	SpaceShip rocket = GamePanel.getCurrent().getPlayer().rocket;
+	SpaceShip spaceShip = GamePanel.getCurrent().getPlayer().spaceShip;
 	long shoot_time;
 
 	public Snipers(int level) {
@@ -17,8 +17,8 @@ public class Snipers extends GeneralGroups {
 	public void move() {
 		if (System.currentTimeMillis() - shoot_time > 5000 && chickens.size() > 0) {
 			Chicken s = (Chicken) RandomChicken();
-			s.x_Destin = rocket.getX();
-			s.y_Destin = rocket.getY();
+			s.x_Destin = spaceShip.getX();
+			s.y_Destin = spaceShip.getY();
 			shoot_time = System.currentTimeMillis();
 		}
 		
@@ -36,8 +36,8 @@ public class Snipers extends GeneralGroups {
 		}
 	}
 
-	private boolean reachedDestination(Chicken skull) {
-		if ((int) skull.getX() == (int) skull.x_Destin) {
+	private boolean reachedDestination(Chicken chicken) {
+		if ((int) chicken.getX() == (int) chicken.x_Destin) {
 			return true;
 		}
 		return false;

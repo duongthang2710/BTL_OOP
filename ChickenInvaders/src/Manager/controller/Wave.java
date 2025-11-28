@@ -37,10 +37,10 @@ public class Wave implements Animatable {
 		label = new WaveLabel(startMassage(stage, wave_Num, ""), 300, 300, 30);
 	}
 
-	public Wave(int wave_Num, int stage, Boss ghool) {
+	public Wave(int wave_Num, int stage, Boss boss) {
 		this.wave_Num = wave_Num;
 		this.stage = stage;
-		this.boss = ghool;
+		this.boss = boss;
 		label = new WaveLabel(startMassage(stage, wave_Num, ""), 300, 300, 30);
 	}
 
@@ -88,7 +88,7 @@ public class Wave implements Animatable {
 				for (GeneralGroups g : groups) {
 					g.move();
 				}
-				dropBones();
+				dropEggs();
 			} else if (this.wave_Num == 5) {
 				boss.move();
 			}
@@ -105,7 +105,7 @@ public class Wave implements Animatable {
 
 	long drop_time = 0;
 
-	public void dropBones() {
+	public void dropEggs() {
 		if (System.currentTimeMillis() - drop_time > 1000) {
 			for (int j = groups.size() - 1; j >= 0 && groups.size() != 0; j--) {
 				for (int i = groups.get(j).chickens.size() - 1; i >= 0 && groups.get(j).chickens.size() > 0; i--) {

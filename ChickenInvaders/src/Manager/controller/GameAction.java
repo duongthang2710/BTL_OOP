@@ -42,11 +42,11 @@ public class GameAction implements MouseMotionListener, MouseListener, ActionLis
 	public void mousePressed(MouseEvent arg0) {
 		if (!game.isPaused()) {
 			if (SwingUtilities.isRightMouseButton(arg0)) {
-				game.getPlayer().rocket.launchMissile();
+				game.getPlayer().spaceShip.launchMissile();
 				game.updateState();
 			}
 			if (SwingUtilities.isLeftMouseButton(arg0)) {
-				game.getPlayer().rocket.shooting = true;
+				game.getPlayer().spaceShip.shooting = true;
 			}
 		}
 
@@ -54,7 +54,7 @@ public class GameAction implements MouseMotionListener, MouseListener, ActionLis
 
 	@Override
 	public void mouseReleased(MouseEvent arg0) {
-		game.getPlayer().rocket.shooting = false;
+		game.getPlayer().spaceShip.shooting = false;
 	}
 
 	@Override
@@ -65,7 +65,7 @@ public class GameAction implements MouseMotionListener, MouseListener, ActionLis
 	@Override
 	public void mouseMoved(MouseEvent arg0) {
 		if (!game.isPaused()) {
-			game.getPlayer().rocket.move(arg0);
+			game.getPlayer().spaceShip.move(arg0);
 		}
 	}
 

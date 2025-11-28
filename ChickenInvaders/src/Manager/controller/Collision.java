@@ -13,41 +13,41 @@ import Manager.Assets;
 
 public class Collision {
 //polygon
-	public static void skullDropCollision(SpaceShip rocket, ArrayList<Drops> drops) {
+	public static void chickenDropCollision(SpaceShip spaceShip, ArrayList<Drops> drops) {
 		for (int i = drops.size() - 1; i >= 0; i--) {
-			if (drops.get(i) instanceof Eggs && rocket.has_shield == false) {
-				drops.get(i).intersect(rocket);
+			if (drops.get(i) instanceof Eggs && spaceShip.has_shield == false) {
+				drops.get(i).intersect(spaceShip);
 			} else if (drops.get(i) instanceof groups.Chicken.drops.Coin) {
-				drops.get(i).intersect(rocket);
+				drops.get(i).intersect(spaceShip);
 			} else if (drops.get(i) instanceof groups.Chicken.drops.HeatEnhancer) {
-				drops.get(i).intersect(rocket);
+				drops.get(i).intersect(spaceShip);
 			} else if (drops.get(i) instanceof FireEnhancer) {
-				drops.get(i).intersect(rocket);
+				drops.get(i).intersect(spaceShip);
 			}
 		}
 	}
 
-	public static void rocketSkullCollapse(SpaceShip rocket, ArrayList<GeneralChicken> skulls) {
-		a: for (int i = skulls.size() - 1; i >= 0; i--) {
-			if (skulls.get(i).intersects(rocket) && !rocket.has_shield) {
-				rocket.die();
-				skulls.get(i).die();
+	public static void spaceShipChickenCollapse(SpaceShip spaceShip, ArrayList<GeneralChicken> chickens) {
+		a: for (int i = chickens.size() - 1; i >= 0; i--) {
+			if (chickens.get(i).intersects(spaceShip) && !spaceShip.has_shield) {
+				spaceShip.die();
+				chickens.get(i).die();
                 Assets.sound.playSound("chickendie");
-				skulls.remove(i);
+				chickens.remove(i);
 				break a;
 			}
-			for (int j = rocket.tirs.size() - 1; j >= 0 && rocket.tirs.size() >= 0; j--) {
-				if (skulls.get(i).intersects(rocket.tirs.get(j))) {
-					if (skulls.get(i).joon <= 0) {
-						skulls.get(i).die();
+			for (int j = spaceShip.tirs.size() - 1; j >= 0 && spaceShip.tirs.size() >= 0; j--) {
+				if (chickens.get(i).intersects(spaceShip.tirs.get(j))) {
+					if (chickens.get(i).joon <= 0) {
+						chickens.get(i).die();
                         Assets.sound.playSound("chickendie");
-						GamePanel.getCurrent().getPlayer().score+=skulls.get(i).level;
+						GamePanel.getCurrent().getPlayer().score+= chickens.get(i).level;
 						GamePanel.getCurrent().updateState();
-						skulls.remove(skulls.get(i));
+						chickens.remove(chickens.get(i));
 					} else {
-						skulls.get(i).joon -=rocket.tirs.get(j).getDamage();
+						chickens.get(i).joon -=spaceShip.tirs.get(j).getDamage();
 					}
-					rocket.tirs.remove(j);
+					spaceShip.tirs.remove(j);
 					break a;
 				}
 			}
@@ -55,28 +55,28 @@ public class Collision {
 		}
 	}
 
-	public static void rocketGhoolCollapse(SpaceShip rocket, ArrayList<Boss> ghool) {
-		a: for (int i = ghool.size() - 1; i >= 0 && ghool.size() > 0; i--) {
-			if (ghool.get(i).intersect(rocket) && !rocket.has_shield) {
-				rocket.die();
-				if (ghool.get(i).joon > 20) {
-					ghool.get(i).joon -= 20;
+	public static void spaceShipBossCollapse(SpaceShip spaceShip, ArrayList<Boss> bosses) {
+		a: for (int i = bosses.size() - 1; i >= 0 && bosses.size() > 0; i--) {
+			if (bosses.get(i).intersect(spaceShip) && !spaceShip.has_shield) {
+				spaceShip.die();
+				if (bosses.get(i).joon > 20) {
+					bosses.get(i).joon -= 20;
 				} else {
-					ghool.get(i).die();
+					bosses.get(i).die();
                     Assets.sound.playSound("chickendie");
-					ghool.remove(i);
+					bosses.remove(i);
 				}
 				break a;
 			}
-			for (int j = rocket.tirs.size() - 1; j >= 0 && rocket.tirs.size() >= 0; j--) {
-				if (ghool.get(i).intersect(rocket.tirs.get(j))) {
-					if (ghool.get(i).joon <= 0) {
-						ghool.get(i).die();
-						ghool.remove(ghool.get(i));
+			for (int j = spaceShip.tirs.size() - 1; j >= 0 && spaceShip.tirs.size() >= 0; j--) {
+				if (bosses.get(i).intersect(spaceShip.tirs.get(j))) {
+					if (bosses.get(i).joon <= 0) {
+						bosses.get(i).die();
+						bosses.remove(bosses.get(i));
 					} else {
-						ghool.get(i).joon -= 6;
+						bosses.get(i).joon -= 6;
 					}
-					rocket.tirs.remove(j);
+					spaceShip.tirs.remove(j);
 					break a;
 				}
 			}

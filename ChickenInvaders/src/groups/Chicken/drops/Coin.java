@@ -17,13 +17,13 @@ public class Coin extends Drops {
 	}
 
 	@Override
-	public void intersect(SpaceShip rocket) {
-		if (this.getDistance(rocket) <= this.radius + rocket.radius) {
+	public void intersect(SpaceShip spaceShip) {
+		if (this.getDistance(spaceShip) <= this.radius + spaceShip.radius) {
 			GamePanel.getCurrent().getController().wave.drops.remove(this);
-			rocket.setCoins(rocket.getCoins() + 1);
+			spaceShip.setCoins(spaceShip.getCoins() + 1);
 		}
-		for (int i = rocket.tirs.size() - 1; i >= 0; i--) {
-			if (this.getDistance(rocket.tirs.get(i)) <= this.radius + rocket.tirs.get(i).radius) {
+		for (int i = spaceShip.tirs.size() - 1; i >= 0; i--) {
+			if (this.getDistance(spaceShip.tirs.get(i)) <= this.radius + spaceShip.tirs.get(i).radius) {
 				GamePanel.getCurrent().getController().wave.drops.remove(this);
 			}
 		}

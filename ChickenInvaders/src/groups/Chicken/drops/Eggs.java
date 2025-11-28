@@ -14,10 +14,10 @@ public class Eggs extends Drops {
 	}
 
 	@Override
-	public void intersect(SpaceShip rocket) {
-		if (getDistance(rocket) <= this.radius + rocket.radius) {
+	public void intersect(SpaceShip spaceShip) {
+		if (getDistance(spaceShip) <= this.radius + spaceShip.radius) {
 			GamePanel.getCurrent().getController().wave.drops.remove(this);
-			rocket.die();
+			spaceShip.die();
 		}
 	}
 

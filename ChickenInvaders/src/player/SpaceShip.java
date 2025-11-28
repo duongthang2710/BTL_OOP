@@ -127,16 +127,16 @@ public class SpaceShip implements Animatable, Serializable {
 	public void collapse(Wave wave) {
 		// Wave wave = GamePanel.getCurrent().getController().wave;
 		for (GeneralGroups g : wave.groups) {
-			Collision.rocketSkullCollapse(this, g.chickens);
+			Collision.spaceShipChickenCollapse(this, g.chickens);
 		}
-		Collision.skullDropCollision(this, wave.drops);
+		Collision.chickenDropCollision(this, wave.drops);
 		if (wave.boss != null)
-			Collision.rocketGhoolCollapse(this, wave.boss.bosses);
+			Collision.spaceShipBossCollapse(this, wave.boss.bosses);
 	}
 
 	public void update() {
 //		this.collapse();
-		this.rocketCooler();
+		this.spaceShipPowerUp();
 		this.move();
 		this.constantShelik(x, y, fire_type, fire_stage);
 		for (int i = missile.size() - 1; i >= 0; i--) {
@@ -193,7 +193,7 @@ public class SpaceShip implements Animatable, Serializable {
 
 	}
 
-	private void rocketCooler() {
+	private void spaceShipPowerUp() {
 		if (this.lives > 0 && System.currentTimeMillis() - die_time > 6500) {
 			if (heat > 0) {
 				heat -= this.fan_strength;

@@ -10,7 +10,7 @@ import Panels.UserPanels.UserChooser;
 @SuppressWarnings("serial")
 public class Player implements Serializable {
 	public String name;
-	public SpaceShip rocket;
+	public SpaceShip spaceShip;
 	public int score;
 	public int stage = 1;
 	public int wave = 1;
@@ -20,12 +20,12 @@ public class Player implements Serializable {
 
 	public Player(String name) {
 		this.name = name;
-		this.rocket = new SpaceShip(screenSize.width / 2, screenSize.height / 2, "SpaceShip\\SpaceShip2.png");
+		this.spaceShip = new SpaceShip(screenSize.width / 2, screenSize.height / 2, "SpaceShip\\SpaceShip2.png");
 	}
 
 	public void nextWave() {
-		this.score += 3 * rocket.getCoins();
-		rocket.setCoins(0);
+		this.score += 3 * spaceShip.getCoins();
+		spaceShip.setCoins(0);
 		GamePanel.getCurrent().updateState();
 		if (this.wave < 5) {
 			this.wave++;

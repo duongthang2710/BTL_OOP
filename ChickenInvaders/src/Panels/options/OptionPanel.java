@@ -17,7 +17,6 @@ public class OptionPanel extends Panel {
 	private static OptionPanel optionPanel = new OptionPanel();
 	Player player;
 
-	LabelButton rocketSetting = new LabelButton("Costumize Spaceship", 220, 120, 550, 50, 47);
 	LabelButton backgrounds = new LabelButton("Backgrounds", 220, 240, 400, 55, 47);
 
 	public LabelButton back = new LabelButton("Back", 220, 360, 130, 50, 47);
@@ -28,7 +27,7 @@ public class OptionPanel extends Panel {
 	}
 
 	private void init() {
-		Collections.addAll(drawables, back, rocketSetting, backgrounds);
+		Collections.addAll(drawables, back,  backgrounds);
 		for (Component c : drawables) {
 			this.add(c);
 		}
@@ -41,13 +40,6 @@ public class OptionPanel extends Panel {
 				u.remove(u.newgame);
 				u.options.setForeground(LabelButton.ExitColor);
 				Manager.setPanel(u);
-			}
-		});
-		rocketSetting.addMouseListener(new Acts(rocketSetting) {
-
-			@Override
-			public void mousePressed(MouseEvent arg0) {
-
 			}
 		});
 		backgrounds.addMouseListener(new Acts(backgrounds) {

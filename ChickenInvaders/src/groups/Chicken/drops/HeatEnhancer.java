@@ -14,11 +14,11 @@ public class HeatEnhancer extends Drops {
 	}
 
 	@Override
-	public void intersect(SpaceShip rocket) {
+	public void intersect(SpaceShip spaceShip) {
 
-		if (getDistance(rocket) <= this.radius + rocket.radius) {
+		if (getDistance(spaceShip) <= this.radius + spaceShip.radius) {
 			GamePanel.getCurrent().getController().wave.drops.remove(this);
-			rocket.setFan_strength(rocket.getFan_strength() + 0.005);
+			spaceShip.setFan_strength(spaceShip.getFan_strength() + 0.005);
 		}
 	}
 }

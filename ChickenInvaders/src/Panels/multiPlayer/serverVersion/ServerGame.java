@@ -58,17 +58,17 @@ class GameKeyListener implements KeyListener {
 	@Override
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == 32)
-			game.getPlayer().rocket.shooting = true;
+			game.getPlayer().spaceShip.shooting = true;
 		if (e.getKeyCode() == 10)
 			System.out.println("");
 		if (e.getKeyCode() == 37)
-			game.getPlayer().rocket.move_left = true;
+			game.getPlayer().spaceShip.move_left = true;
 		if (e.getKeyCode() == 38)
-			game.getPlayer().rocket.move_up = true;
+			game.getPlayer().spaceShip.move_up = true;
 		if (e.getKeyCode() == 39)
-			game.getPlayer().rocket.move_right = true;
+			game.getPlayer().spaceShip.move_right = true;
 		if (e.getKeyCode() == 40)
-			game.getPlayer().rocket.move_down = true;
+			game.getPlayer().spaceShip.move_down = true;
 	}
 
 	@Override
@@ -80,17 +80,17 @@ class GameKeyListener implements KeyListener {
 			break;
 		}
 		if (e.getKeyCode() == 32)
-			game.getPlayer().rocket.shooting = false;
+			game.getPlayer().spaceShip.shooting = false;
 		if (e.getKeyCode() == 10)
 			System.out.println("");
 		if (e.getKeyCode() == 37)
-			game.getPlayer().rocket.move_left = false;
+			game.getPlayer().spaceShip.move_left = false;
 		if (e.getKeyCode() == 38)
-			game.getPlayer().rocket.move_up = false;
+			game.getPlayer().spaceShip.move_up = false;
 		if (e.getKeyCode() == 39)
-			game.getPlayer().rocket.move_right = false;
+			game.getPlayer().spaceShip.move_right = false;
 		if (e.getKeyCode() == 40)
-			game.getPlayer().rocket.move_down = false;
+			game.getPlayer().spaceShip.move_down = false;
 	}
 
 	private void pauseTheGame() {

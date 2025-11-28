@@ -27,13 +27,13 @@ public class FireEnhancer extends Drops {
 	}
 
 	@Override
-	public void intersect(SpaceShip rocket) {
-		if (getDistance(rocket) <= this.radius + rocket.radius) {
+	public void intersect(SpaceShip spaceShip) {
+		if (getDistance(spaceShip) <= this.radius + spaceShip.radius) {
 			GamePanel.getCurrent().getController().wave.drops.remove(this);
-			if (rocket.getFire_type() != type)
-				rocket.setFire_type(type);
+			if (spaceShip.getFire_type() != type)
+				spaceShip.setFire_type(type);
 			else {
-				rocket.setFire_stage(rocket.getFire_stage() + 1);
+				spaceShip.setFire_stage(spaceShip.getFire_stage() + 1);
 			}
 			GamePanel.getCurrent().updateState();
 		}

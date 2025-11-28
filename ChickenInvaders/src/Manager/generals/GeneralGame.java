@@ -64,8 +64,8 @@ public class GeneralGame extends JPanel implements Animatable {
 	}
 
 	public void updateState() {
-		state.setText("          " + player.rocket.lives + "          " + player.rocket.bomb + "          "
-				+ player.rocket.getFire_stage() + "          " + player.rocket.getCoins());
+		state.setText("          " + player.spaceShip.lives + "          " + player.spaceShip.bomb + "          "
+				+ player.spaceShip.getFire_stage() + "          " + player.spaceShip.getCoins());
 		point.setText("Points" + player.score);
 	}
 
@@ -73,18 +73,18 @@ public class GeneralGame extends JPanel implements Animatable {
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		back.drawMoving(g);
-		player.rocket.paint(g);
+		player.spaceShip.paint(g);
 		game.controller.paint(g);
 		drawHeatbar(g);
 		g.setColor(LabelButton.ExitColor);
-		g.drawRect(0, 70, 30, (int) game.player.rocket.Max_heat * 2);
+		g.drawRect(0, 70, 30, (int) game.player.spaceShip.Max_heat * 2);
 		g.drawImage(Assets.bar, 0, screenSize.height - 40, 280, 40, null);
 	}
 
 	private void drawHeatbar(Graphics g) {
 		Color startColor = Color.blue;
 		Color endColor = Color.red;
-		int startX = 0, startY = 70, endX = 30, endY = (int) player.rocket.heat * 2;
+		int startX = 0, startY = 70, endX = 30, endY = (int) player.spaceShip.heat * 2;
 		GradientPaint gradient = new GradientPaint(startX, startY, startColor, endX, endY, endColor);
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setPaint(gradient);
@@ -93,7 +93,7 @@ public class GeneralGame extends JPanel implements Animatable {
 
 	@Override
 	public void move() {
-		player.rocket.update();
+		player.spaceShip.update();
 		game.back.move();
 		game.controller.move();
 	}

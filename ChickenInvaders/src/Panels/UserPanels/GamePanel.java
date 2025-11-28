@@ -59,8 +59,8 @@ public class GamePanel extends JPanel implements Animatable {
 	}
 
 	public void updateState() {
-		getState().setText("          " + getPlayer().rocket.lives + "          " + getPlayer().rocket.bomb
-				+ "          " + getPlayer().rocket.getFire_stage() + "          " + getPlayer().rocket.getCoins());
+		getState().setText("          " + getPlayer().spaceShip.lives + "          " + getPlayer().spaceShip.bomb
+				+ "          " + getPlayer().spaceShip.getFire_stage() + "          " + getPlayer().spaceShip.getCoins());
 		getPoint().setText("Points" + getPlayer().score);
 	}
 
@@ -71,19 +71,19 @@ public class GamePanel extends JPanel implements Animatable {
 		ArrayList<Player> values = new ArrayList<Player>(MAP_PLAYERS.values());
 
 		for (int t = values.size() - 1; t >= 0; t--) {
-			values.get(t).rocket.paint(g);
+			values.get(t).spaceShip.paint(g);
 		}
 		game.getController().paint(g);
 		drawHeatbar(g);
 		g.setColor(LabelButton.ExitColor);
-		g.drawRect(0, 70, 30, (int) game.getPlayer().rocket.Max_heat * 2);
+		g.drawRect(0, 70, 30, (int) game.getPlayer().spaceShip.Max_heat * 2);
 		g.drawImage(Assets.bar, 0, screenSize.height - 40, 280, 40, null);
 	}
 
 	private void drawHeatbar(Graphics g) {
 		Color startColor = Color.blue;
 		Color endColor = Color.red;
-		int startX = 0, startY = 70, endX = 30, endY = (int) getPlayer().rocket.heat * 2;
+		int startX = 0, startY = 70, endX = 30, endY = (int) getPlayer().spaceShip.heat * 2;
 		GradientPaint gradient = new GradientPaint(startX, startY, startColor, endX, endY, endColor);
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setPaint(gradient);
@@ -96,8 +96,8 @@ public class GamePanel extends JPanel implements Animatable {
 		ArrayList<Player> values = new ArrayList<Player>(MAP_PLAYERS.values());
 
 		for (int t = values.size() - 1; t >= 0; t--) {
-			values.get(t).rocket.update();
-			values.get(t).rocket.collapse(game.controller.wave);
+			values.get(t).spaceShip.update();
+			values.get(t).spaceShip.collapse(game.controller.wave);
 		}
 //___________________________________________________________________>
 		game.getBack().move();

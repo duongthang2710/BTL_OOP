@@ -199,10 +199,10 @@ public abstract class GeneralChicken {
 		return false;
 	}
 
-	public boolean intersects(SpaceShip rocket) {
-		int deltaX = (int) Math.sqrt((this.getX() - rocket.getX()) * (this.getX() - rocket.getX())
-				+ (this.getY() - rocket.getY()) * (this.getY() - rocket.getY()));
-		if (this.radius + rocket.radius >= deltaX)
+	public boolean intersects(SpaceShip spaceShip) {
+		int deltaX = (int) Math.sqrt((this.getX() - spaceShip.getX()) * (this.getX() - spaceShip.getX())
+				+ (this.getY() - spaceShip.getY()) * (this.getY() - spaceShip.getY()));
+		if (this.radius + spaceShip.radius >= deltaX)
 			return true;
 		return false;
 	}

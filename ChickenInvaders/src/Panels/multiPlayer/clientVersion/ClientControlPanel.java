@@ -95,10 +95,10 @@ public class ClientControlPanel extends Panel {
 						ArrayList<Player> pls = (ArrayList<Player>) panel.din.readObject();
 						for (Player p : pls) {
 							if (!p.name.equals(panel.player.name)) {
-								p.rocket.initLoaded();
-								if (p.rocket.shooting) {
-									panel.player.rocket.constantShelik(p.rocket.getX(), p.rocket.getY(),
-											p.rocket.getFire_type(), p.rocket.getFire_stage());
+								p.spaceShip.initLoaded();
+								if (p.spaceShip.shooting) {
+									panel.player.spaceShip.constantShelik(p.spaceShip.getX(), p.spaceShip.getY(),
+											p.spaceShip.getFire_type(), p.spaceShip.getFire_stage());
 								}
 								ClientGame.getcurrent().MAP_PLAYERS.put(p.name, p);
 							}

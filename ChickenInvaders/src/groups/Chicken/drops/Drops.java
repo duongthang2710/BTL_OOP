@@ -62,6 +62,6 @@ public abstract class Drops implements Animatable {
 
 	}
 
-	public abstract void intersect(SpaceShip rocket);
+	public abstract void intersect(SpaceShip spaceShip);
 
 }

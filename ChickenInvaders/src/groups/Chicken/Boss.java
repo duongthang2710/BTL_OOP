@@ -30,17 +30,17 @@ public class Boss {
 	public int joon;
 	private int radius;
 	private int level;
-	private long bone_time;
+	private long egg_time;
     private double baseSpeed = 2.0;
 
 
 	public Boss(int level) {
 		this.level = level;
-		makeGhool();
+		makeBoss();
 		bosses.add(this);
 	}
 
-	private void makeGhool() {
+	private void makeBoss() {
 		switch (level) {
 		case 1:
 			this.radius = 150;
@@ -84,10 +84,10 @@ public class Boss {
         ArrayList<Drops> drops = GamePanel.getCurrent().getController().wave.drops;
 
         int totalDirections = 16;
-        int bonesPerShot = 5;
+        int eggsPerShot = 5;
         double Speed = this.baseSpeed;
 
-        for (int i = 0; i < bonesPerShot; i++) {
+        for (int i = 0; i < eggsPerShot; i++) {
             int dirIndex = (int)(Math.random() * totalDirections);
             double angle = 2 * Math.PI * dirIndex / totalDirections;
 
@@ -127,9 +127,9 @@ public class Boss {
 
 	public void move() {
 		for (Boss s : bosses) {
-			if (System.currentTimeMillis() - bone_time > 500) {
+			if (System.currentTimeMillis() - egg_time > 500) {
 				s.addEggs();
-				bone_time = System.currentTimeMillis();
+				egg_time = System.currentTimeMillis();
 			}
             if (s.y < screenSize.height / 2 + distanceheight) {
                 s.y += s.v_y;

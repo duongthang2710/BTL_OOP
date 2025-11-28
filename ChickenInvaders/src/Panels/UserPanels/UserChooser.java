@@ -42,7 +42,7 @@ public class UserChooser extends Panel implements SavePlayer {
 
 	private void addLoaded(Player[] loaded) {
 		for (Player player : loaded) {
-			player.rocket.initLoaded();
+			player.spaceShip.initLoaded();
 			addPlayer(player);
 		}
 	}

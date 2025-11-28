@@ -9,7 +9,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85b0735b-014c-4263-be8c-ffef48143dfd" name="Changes" comment="" />
+    <list default="true" id="85b0735b-014c-4263-be8c-ffef48143dfd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game Data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Game Data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/controller/Collision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/controller/Collision.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/controller/GameAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/controller/GameAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/controller/GameKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/controller/GameKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/controller/Wave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/controller/Wave.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager/generals/GeneralGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/generals/GeneralGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/UserPanels/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/UserPanels/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/UserPanels/UserChooser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/UserPanels/UserChooser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/multiPlayer/clientVersion/ClientControlPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/multiPlayer/clientVersion/ClientControlPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/multiPlayer/clientVersion/ClientGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/multiPlayer/clientVersion/ClientGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/multiPlayer/serverVersion/ManageClients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/multiPlayer/serverVersion/ManageClients.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/multiPlayer/serverVersion/ServerGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/multiPlayer/serverVersion/ServerGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/options/OptionPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/options/OptionPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/groups/Chicken/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/groups/Chicken/Boss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/groups/Chicken/GeneralChicken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/groups/Chicken/GeneralChicken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/groups/Chicken/drops/Coin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/groups/Chicken/drops/Coin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/groups/Chicken/drops/Drops.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/groups/Chicken/drops/Drops.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/groups/Chicken/drops/Eggs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/groups/Chicken/drops/Eggs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/groups/Chicken/drops/FireEnhancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/groups/Chicken/drops/FireEnhancer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/groups/Chicken/drops/HeatEnhancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/groups/Chicken/drops/HeatEnhancer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/groups/groups/Snipers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/groups/groups/Snipers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/player/SpaceShip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/player/SpaceShip.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,22 +52,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.MyMain.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Code/BTL_OOP/ChickenInvaders",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.MyMain.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Code/BTL_OOP/ChickenInvaders&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="MyMain" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main.MyMain" />

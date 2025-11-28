@@ -55,12 +55,12 @@ public class ManageClients implements Runnable {
 		while (true) {
 			try {
 				PlayerRead = (Player) din.readObject();
-				PlayerRead.rocket.initLoaded();
-                System.out.println(PlayerRead.rocket.imagePath);
-				if (PlayerRead.rocket.shooting) {
-					ServerGame.getcurrent().player.rocket.constantShelik(PlayerRead.rocket.getX(),
-							PlayerRead.rocket.getY(), PlayerRead.rocket.getFire_type(),
-							PlayerRead.rocket.getFire_stage());
+				PlayerRead.spaceShip.initLoaded();
+                System.out.println(PlayerRead.spaceShip.imagePath);
+				if (PlayerRead.spaceShip.shooting) {
+					ServerGame.getcurrent().player.spaceShip.constantShelik(PlayerRead.spaceShip.getX(),
+							PlayerRead.spaceShip.getY(), PlayerRead.spaceShip.getFire_type(),
+							PlayerRead.spaceShip.getFire_stage());
 				}
 				ServerGame.getcurrent().MAP_PLAYERS.put(PlayerRead.name, PlayerRead);
 			} catch (Exception e) {
